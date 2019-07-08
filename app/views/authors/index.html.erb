@@ -1,0 +1,11 @@
+<h1>Authors</h1>
+
+<%if @authors%>
+  <% @authors.each do |author|%>
+    <div>
+      <p class="author item"><%=author.name%></p>
+      <%=render "booklist", author: author%>
+    </div>
+  <%end%>
+<%end%>
+

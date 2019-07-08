@@ -1,0 +1,25 @@
+@mixin font-settings($family: $font-fam, $size: 1em, $color: $first-color) {
+	font-family: $family;
+	font-size: $size;
+	color: $color;
+}
+
+@mixin flex-start {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin link-style {
+	text-decoration: none;
+	color: $second-color;
+	height: 2em;
+	&:hover {
+		background-color: $first-bgcolor;
+		color: $first-color;
+	}
+}
+
+@mixin single-line {
+	margin-left: 1em;
+	width: 95%;
+}

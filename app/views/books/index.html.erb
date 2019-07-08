@@ -1,0 +1,11 @@
+<h1 class="heading">Books</h1>
+
+<%if @books%>
+
+  <% @books.each do |book|%>
+  <section class="list-item">
+    <%=render "shared/book_item", book: book%>
+  </section>
+  <%end%>
+
+<%end%>

@@ -1,0 +1,7 @@
+<div>
+  <%if author.books%>
+    <% author.books.each do |book|%>
+      <p class="list-item title booklist"><%=link_to book.title, book_path(book), class: "book-link"%></p>
+    <%end%>
+  <%end%>
+</div>

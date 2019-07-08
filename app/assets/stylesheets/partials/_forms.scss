@@ -1,0 +1,13 @@
+.form-class {
+	@include single-line;
+}
+
+.checkbox-class {
+	height: 25px;
+	width: 25px;
+	color: $first-color;
+}
+
+.text-field {
+	height: 80px;
+}

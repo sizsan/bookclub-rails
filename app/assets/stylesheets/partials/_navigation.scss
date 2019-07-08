@@ -1,0 +1,36 @@
+.side-nav {
+	position: absolute;
+	top: 20vh;
+	display: flex;
+	flex-direction: column;
+	width: 10vw;
+	height: 100vh;
+	grid-area: side-nav;
+}
+
+.nav-link {
+	@include link-style;
+	background-color: $second-bgcolor;
+	color: $second-color;
+	padding: 1em;
+	width: 10vw;
+}
+
+.top-nav {
+	grid-area: top-nav;
+	@include flex-start;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $second-bgcolor;
+	color: $second-color;
+	height: 3em;
+}
+
+.top-nav-link {
+	@include link-style;
+	padding: 1em;
+}
+
+#username {
+	padding-right: 1em;
+}

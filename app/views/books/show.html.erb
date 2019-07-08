@@ -1,0 +1,32 @@
+<h1 ><%=@book.title%></h1>
+
+<div class="top-link">
+  <% if user_signed_in? %>
+    <%if  @can_add %>
+      <p class="link book-item"> <%= link_to 'Add to my list', add_book_to_list_path(:id => @book)%></p>
+    <%else%>
+      <p class="link book-item"> <%= link_to 'Remove from my list', @book, method: "delete"%></p>
+    <%end%>
+  <%end%>
+
+  <p class="link book-item"> <%=link_to 'Fans', fans_path(@book)%>
+</div>
+<p class="author item book-item "><%=@book.author_name%></p>
+<p class="genre item book-item"><%= @book.genre if @book.genre%> 
+</p>
+<div>
+  <h1 class="heading">Reviews</h1>
+  <p class="rating item">Overall Rating: <%= @rating%> </p>
+  <%= link_to 'Add a review', new_review_path(book: @book), class: "link item"%>
+  <%if @reviews%>
+    <%@reviews.each do |review|%>
+      <div>
+        <p class="rating review-item"><%= "Rating: #{review.rating}"%></p>
+        <p class="username review-item"><%= review.user.name%></p>
+        <p class="review-item"><%= review.comment %></p>
+      </div>
+    <%end%>
+  <%end%>
+</div>
+
+<p class="link item-link"><%= link_to 'Back', :back%>

@@ -1,0 +1,12 @@
+
+<h1 class="heading"><%=@book_list_item.book.title%></h1>
+
+<p class="author item"><%=@book_list_item.book.author.name%></p>
+
+<%=form_with model: @book_list_item, class:"form-class" do |form|%>
+<p>
+<%=form.check_box :for_trade, value: @book_list_item.for_trade, class: "checkbox-class"%>
+<%= label :for_trade, "Willing to trade"%>
+</p>
+<%=form.submit 'Update', class:"button"%>
+<%end%>

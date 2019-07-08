@@ -1,0 +1,14 @@
+<h1>My Book List</h1>
+
+<p class="top-link">
+<%= link_to 'Add a book', new_book_path, class:"button"%>
+</p>
+<%if @books%>
+  <%@books.each do |book|%>
+    <p class="list-item title booklist">
+    <%=render "shared/book_item", book: book%>
+    <div class="item"> <%= link_to 'Remove', book, method: "delete", class: "link"%></div>
+    <div class="item"><%=link_to 'Edit', edit_book_list_item_path(book), class: "link"%></div>
+    </p>
+  <%end%>
+<%end%>

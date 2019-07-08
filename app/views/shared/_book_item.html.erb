@@ -1,0 +1,6 @@
+<div class="title item">
+  <%= link_to book.title, book_path(book), class: "book-link" %>
+</div>
+<div class="item">
+  <%= link_to "#{book.author.first_name} #{book.author.last_name}", author_path(book.author), class: "author link"%>
+</div>

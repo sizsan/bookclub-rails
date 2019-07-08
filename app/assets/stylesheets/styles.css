@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter&display=swap");
+body {
+  font-family: "Bitter", serif;
+  font-size: 1em;
+  color: #1a1919;
+  padding-left: 0.5em;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas: "top-nav top-nav" "side-nav content";
+}
+
+.content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.heading {
+  width: 80vw;
+  margin-left: 0.5em;
+}
+
+.list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80vw;
+}
+
+.item {
+  padding: 0.5em;
+  margin-left: 1em;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #4b014b;
+  font-family: "Bitter", serif;
+  font-size: 1em;
+  color: #d3cfcf;
+  padding: 0.5em;
+}
+
+.top-link {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.item-link {
+  margin-left: 1em;
+  width: 95%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.username {
+  font-style: italic;
+  color: #252569;
+}
+
+.side-nav {
+  position: absolute;
+  top: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10vw;
+  height: 100vh;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: side-nav;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #d3cfcf;
+  height: 2em;
+  background-color: rgba(26, 25, 25, 0.9);
+  color: #d3cfcf;
+  padding: 1em;
+  width: 10vw;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: #1a1919;
+}
+
+.top-nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: top-nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(26, 25, 25, 0.9);
+  color: #d3cfcf;
+  height: 3em;
+}
+
+.top-nav-link {
+  text-decoration: none;
+  color: #d3cfcf;
+  height: 2em;
+  padding: 1em;
+}
+
+.top-nav-link:hover {
+  background-color: white;
+  color: #1a1919;
+}
+
+#username {
+  padding-right: 1em;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.review-item {
+  margin: 1em;
+  padding-left: 0.5em;
+}
+
+.author {
+  font-family: "Bitter", serif;
+  font-size: 1em;
+  color: #252569;
+}
+
+.book-link {
+  font-family: "Bitter", serif;
+  font-size: 1em;
+  color: #1a1919;
+  -webkit-transition: font-size 1s;
+  transition: font-size 1s;
+  text-decoration: none;
+}
+
+.book-link:hover {
+  background-color: rgba(26, 25, 25, 0.9);
+  font-family: "Bitter", serif;
+  font-size: 1.1em;
+  color: #d3cfcf;
+}
+
+.booklist {
+  padding-top: 0;
+  margin-left: 2em;
+}
+
+.book-item {
+  margin-left: 1em;
+  width: 90%;
+}
+
+.form-class {
+  margin-left: 1em;
+  width: 95%;
+}
+
+.checkbox-class {
+  height: 25px;
+  width: 25px;
+  color: #1a1919;
+}
+
+.text-field {
+  height: 80px;
+}
+/*# sourceMappingURL=styles.css.map */

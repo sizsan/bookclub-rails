@@ -1,0 +1,36 @@
+.title {
+	font-weight: bold;
+}
+
+.rating {
+	font-weight: bold;
+}
+
+.review-item {
+	margin: 1em;
+	padding-left: 0.5em;
+}
+
+.author {
+	@include font-settings($color: $accent-color);
+}
+
+.book-link {
+	@include font-settings();
+	transition: font-size 1s;
+	text-decoration: none;
+	&:hover {
+		background-color: $second-bgcolor;
+		@include font-settings($size: 1.1em, $color: $second-color);
+	}
+}
+
+.booklist {
+	padding-top: 0;
+	margin-left: 2em;
+}
+
+.book-item {
+	margin-left: 1em;
+	width: 90%;
+}
